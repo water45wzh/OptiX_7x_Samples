@@ -169,6 +169,7 @@ include_directories(
   "imgui"
   ${GLEW_INCLUDE_DIRS}
   ${GLFW_INCLUDE_DIR}
+  ${OPENGL_INCLUDE_DIRS}
   ${OPTIX_INCLUDE_DIR}
   ${CUDAToolkit_INCLUDE_DIRS}
   ${IL_INCLUDE_DIR}
@@ -203,7 +204,7 @@ add_executable( intro_denoiser
 #message("ILUT_LIBRARIES    = " "${ILUT_LIBRARIES}")
 
 target_link_libraries( intro_denoiser
-  ${OPENGL_gl_LIBRARY}
+  ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARIES}
   ${GLFW_LIBRARIES}
   CUDA::cuda_driver

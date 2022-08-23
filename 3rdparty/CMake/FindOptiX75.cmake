@@ -14,7 +14,7 @@ if ("${OPTIX75_PATH}" STREQUAL "")
     set(OPTIX75_PATH "C:/ProgramData/NVIDIA Corporation/OptiX SDK 7.5.0")
   else()
     # Adjust this if the OptiX SDK 7.5.0 installation is in a different location.
-    set(OPTIX75_PATH "~/NVIDIA-OptiX-SDK-7.5.0-linux64")
+    set(OPTIX75_PATH "/usr/local/NVIDIA-OptiX-SDK-7.5.0-linux64-x86_64")
   endif()
 endif()
 

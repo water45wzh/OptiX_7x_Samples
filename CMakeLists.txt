@@ -16,6 +16,7 @@ set(LOCAL_ARCH "amd64")
 
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 
+
 if(UNIX) 
   set(OS "linux")
   add_definitions("-DLINUX")

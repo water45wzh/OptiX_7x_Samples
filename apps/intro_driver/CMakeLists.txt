@@ -168,6 +168,7 @@ include_directories(
   "imgui"
   ${GLEW_INCLUDE_DIRS}
   ${GLFW_INCLUDE_DIR}
+  ${OPENGL_INCLUDE_DIRS}
   ${OPTIX_INCLUDE_DIR}
   ${CUDAToolkit_INCLUDE_DIRS}
   ${IL_INCLUDE_DIR}
@@ -202,9 +203,10 @@ add_executable( intro_driver
 #message("ILUT_LIBRARIES    = " "${ILUT_LIBRARIES}")
 
 target_link_libraries( intro_driver
-  ${OPENGL_gl_LIBRARY}
+  ${OPENGL_LIBRARIES}
   ${GLEW_LIBRARIES}
   ${GLFW_LIBRARIES}
+  CUDA::cudart
   CUDA::cuda_driver
   ${IL_LIBRARIES}
   ${ILU_LIBRARIES}
